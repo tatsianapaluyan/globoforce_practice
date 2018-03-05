@@ -1,11 +1,12 @@
 package plantModel;
 
-import plant.CategoryName;
-import plant.PlantName;
+import plantData.CategoryName;
+import plantData.PlantName;
 
 public class Conifers extends Tree {
 
     private String needles;
+
 
     public Conifers(CategoryName categoryName, PlantName plantName, double height, double width, int frequencyOfWatering, int age, String needles) {
         super(categoryName, plantName, height, width, frequencyOfWatering, age);
@@ -16,18 +17,14 @@ public class Conifers extends Tree {
         super(categoryName, plantName, height, width, frequencyOfWatering, age);
     }
 
+    public Conifers() {
+    }
 
-    //override parent's method getTypeOfTree
     @Override
-    public String getTypeOfTree() {
-        return super.getTypeOfTree();
-    }
-
-    public String getNeedles() {
-        return needles;
-    }
-
-    public void setNeedles(String needles) {
-        this.needles = needles;
+    public boolean isLeavesFall() {
+        {
+            System.out.println("Сoniferous plant has no leaves " + getPlantName());
+        }
+        return false;
     }
 }

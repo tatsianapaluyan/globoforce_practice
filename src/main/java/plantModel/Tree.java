@@ -1,16 +1,15 @@
 package plantModel;
 
 
-import plant.CategoryName;
-import plant.PlantName;
+import plantData.CategoryName;
+import plantData.PlantName;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class Tree extends Plant {
 
     private int age;
-    private List<Plant> conifers = new ArrayList<Plant>();
-    private List<Plant> leafy = new ArrayList<Plant>();
 
     public Tree(CategoryName categoryName, PlantName plantName, double height, double width, int frequencyOfWatering, int age) {
         super(categoryName, plantName, height, width, frequencyOfWatering);
@@ -22,39 +21,15 @@ public class Tree extends Plant {
     }
 
     public Tree() {
-        super();
     }
-
-    public Tree(Plant plant, List<Plant> conifers) {
-        super(plant);
-        this.conifers = conifers;
-    }
-//    public Tree(Plant plant, List<Plant> leafy) {
-//        super(plant;
-//        this.leafy = leafy;
-//    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
 
     @Override
-    public List<Plant> isLeavesFall() {
-        for (Plant greens : leafy)
-            if (getTypeOfTree().equals("Leaves")) {
-                System.out.println("Plant with Leaves" + getPlantName());
-                return leafy;
-            } else {
-                System.out.println("Plant with needles" + getPlantName());
-            }
-        return conifers;
+    public boolean isLeavesFall() {
+        return false;
     }
+
 }
+
 
 
 

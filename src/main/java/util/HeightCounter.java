@@ -1,6 +1,7 @@
 package util;
 
 import plantModel.Plant;
+
 import java.util.Comparator;
 
 public class HeightCounter implements Comparator<Plant> {

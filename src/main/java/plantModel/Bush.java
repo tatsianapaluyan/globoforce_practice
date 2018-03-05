@@ -1,9 +1,7 @@
 package plantModel;
 
-import plant.CategoryName;
-import plant.PlantName;
-
-import java.util.List;
+import plantData.CategoryName;
+import plantData.PlantName;
 
 public class Bush extends Plant {
 
@@ -15,22 +13,10 @@ public class Bush extends Plant {
         this.dry = dry;
     }
 
-    public Bush(CategoryName categoryName, PlantName plantName, double height, double width) {
-        super(categoryName, plantName, height, width);
+    @Override
+    public boolean isLeavesFall() {
+        return false;
     }
-
-    public List<Plant> isLeavesFall() {
-        return null;
-    }
-
-    public boolean isDry() {
-        return dry;
-    }
-
-    public void setDry(boolean dry) {
-        this.dry = dry;
-    }
-
 
 }
 

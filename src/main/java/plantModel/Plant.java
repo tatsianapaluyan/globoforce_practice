@@ -1,7 +1,7 @@
 package plantModel;
 
-import plant.CategoryName;
-import plant.PlantName;
+import plantData.CategoryName;
+import plantData.PlantName;
 import util.LeavesFall;
 
 import java.util.List;
@@ -57,14 +57,5 @@ public abstract class Plant implements LeavesFall {
 
     }
 
-
-    public String getTypeOfTree() {
-        return typeOfTree;
-    }
-
-    public void setTypeOfTree(String typeOfTree) {
-        this.typeOfTree = typeOfTree;
-    }
-
-    public abstract List<Plant> isLeavesFall();
+    public abstract boolean isLeavesFall();
 }

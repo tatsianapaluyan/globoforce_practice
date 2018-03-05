@@ -1,4 +1,4 @@
-package plant;
+package plantData;
 
 public enum PlantName {
     //Bush

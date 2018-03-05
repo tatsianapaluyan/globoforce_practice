@@ -1,27 +1,31 @@
 package plantModel;
 
-import plant.CategoryName;
-import plant.PlantName;
+import plantData.CategoryName;
+import plantData.PlantName;
 
 public class Leafy extends Tree {
 
     private String leaf;
 
-    public Leafy(CategoryName categoryName, PlantName plantName, double height, double width, int frequencyOfWatering, int age) {
+    public Leafy(CategoryName categoryName, PlantName plantName, double height, double width, int frequencyOfWatering, int age, String leaf) {
         super(categoryName, plantName, height, width, frequencyOfWatering, age);
+        this.leaf = leaf;
     }
 
-    public Leafy(CategoryName categoryName, PlantName plantName, double height, double width, String leaf) {
+    public Leafy(CategoryName categoryName, PlantName plantName, double height, double width) {
         super(categoryName, plantName, height, width);
-        this.leaf = leaf;
     }
 
-    public String isLeaf() {
-        return leaf;
+    public Leafy() {
     }
 
-    public void setLeaf(String leaf) {
-        this.leaf = leaf;
+    @Override
+    public boolean isLeavesFall() {
+        if (getFrequencyOfWatering() > 3) {
+            System.out.println("The plant is not withered, it is necessary to water");
+        } else {
+            System.out.println("The 'Leafy' plant withered and the leaves fell down");
+        }
+        return false;
     }
-
 }
